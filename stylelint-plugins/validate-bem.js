@@ -1,11 +1,13 @@
 const validateImportFonts = require('./validate-import-fonts.js');
 const validateImportNormalize = require('./validate-import-normalize.js');
 const validateFontFaceDeclarationInFontsFileOnly = require('./validate-font-face-declaration-in-fonts-file-only.js');
+const validateFontFaceDeclarationSrc = require('./validate-font-face-declaration-src');
 
 const plugins = [
   validateImportFonts,
   validateImportNormalize,
-  validateFontFaceDeclarationInFontsFileOnly
+  validateFontFaceDeclarationInFontsFileOnly,
+  validateFontFaceDeclarationSrc
 ];
 
 module.exports = plugins;
