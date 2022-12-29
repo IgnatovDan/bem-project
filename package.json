@@ -26,7 +26,7 @@
     "form.name is required": "declared as required in metadata in .htmlvalidate.json, it is not required by default in 'html5' settings"
   },
   "todo": {
-    "@font-face": "duplicates are not allowed: { src: url(./fonts/Inter-Regular.woff2) format('woff2'); src: url(./fonts/Inter-Regular.woff)  format('woff');",
+    "rename rules/files to 'denyXXX' template": "instead of 'validate-font-face-declaration-src'",
     "@font-face2": "not used in blocks/** files",
     "BEM modifier": "not allowed to duplicate style of its master BEM element",
     "@media modifier": "not allowed to explicitly duplicate its master styles",
