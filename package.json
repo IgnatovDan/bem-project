@@ -108,6 +108,7 @@
       "bem/validate-import-normalize": true,
       "bem/validate-import-fonts": true,
       "bem/validate-font-face-declaration-in-fonts-file-only": true,
+      "bem/validate-font-face-declaration-src": true,
       "no-duplicate-selectors": true,
       "selector-no-qualifying-type": true,
       "selector-max-id": 0,
