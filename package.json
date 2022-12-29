@@ -1,0 +1,158 @@
+{
+  "scripts": {
+    "all": "npm run stylelint & npm run eslint & npm run html-validate",
+    "postcss-import": "postcss ./pages/index.css --use postcss-import --output ./styles.css",
+    "stylelint": "npx stylelint \"**/*.css\"",
+    "eslint": "npx eslint \"**/*.html\" --resolve-plugins-relative-to .",
+    "html-validate": "npm exec html-validate index.html",
+    "html-validator": "html-validator --file=index.html --verbose",
+    "test": "jest --coverage && eslint ."
+  },
+  "notes": {
+    "html-validate config": ".htmlvalidate.json",
+    "ESLint couldn't determine the plugin uniquely": "https://github.com/eslint/eslint/issues/13385 - use '--resolve-plugins-relative-to .' or 'root'",
+    "WARN config global `--global`, `--local` are deprecated": "https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc",
+    "html-validator: is not used": "it shows non-readable messages and doesn't have a config to disable some rules",
+    "html-validate: disable button.type is required": "already checked by eslint",
+    "selector-class-pattern1": "https://gist.github.com/Potherca/f2a65491e63338659c3a0d2b07eee382",
+    "selector-class-pattern2": "https://github.com/simonsmith/stylelint-selector-bem-pattern/issues/23#issuecomment-279216443",
+    "selector-class-pattern3": "https://github.com/bem-sdk-archive/bem-naming/blob/master/lib/create-parse.js"
+  },
+  "features": {
+    "<br><i><b> not allowed": "declared as 'deprecated' in .htmlvalidate.json",
+    "button.type is required": "checked by eslint",
+    "heading-level is required": "heading-level rule in .htmlvalidate.json",
+    "BEM class names": "class-pattern rule in .htmlvalidate.json",
+    "form.name is required": "declared as required in metadata in .htmlvalidate.json, it is not required by default in 'html5' settings"
+  },
+  "todo": {
+    "@font-face": "duplicates are not allowed: { src: url(./fonts/Inter-Regular.woff2) format('woff2'); src: url(./fonts/Inter-Regular.woff)  format('woff');",
+    "@font-face2": "not used in blocks/** files",
+    "BEM modifier": "not allowed to duplicate style of its master BEM element",
+    "@media modifier": "not allowed to explicitly duplicate its master styles",
+    "index.css": "should be placed in the 'pages' folder",
+    "index.css @import paths": "should be in accordance with BEM nesting rules, '../blocks/' only, no grouping, no root folder paths",
+    "css file name": "should be equal to its CSS classes",
+    "@import url(some.css)": "allowed in the index.css only",
+    "img.alt": "require RU texts somehow (at least one RU char?)",
+    "head>title": "require RU texts somehow (at least one RU char?)",
+    "html.lang": "allow 'ru' only"
+  },
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.15.0",
+    "@html-eslint/parser": "^0.15.0",
+    "eslint": "^8.28.0",
+    "html-validate": "^7.10.0",
+    "html-validator-cli": "^7.0.1",
+    "jest": "*",
+    "jest-preset-stylelint": "^6.0.0",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "postcss-value-parser": "^4.2.0",
+    "stylelint": "^14.16.0",
+    "stylelint-config-standard": "^29.0.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "env": {
+      "es6": true
+    },
+    "ignorePatterns": [
+      "**/coverage/*"
+    ],
+    "plugins": [
+      "@html-eslint"
+    ],
+    "rules": {
+      "@html-eslint/no-inline-styles": 2,
+      "@html-eslint/no-multiple-h1": 2,
+      "@html-eslint/require-lang": 2,
+      "@html-eslint/require-title": 2,
+      "@html-eslint/require-img-alt": 2,
+      "@html-eslint/no-skip-heading-levels": 2,
+      "@html-eslint/require-meta-viewport": 2,
+      "@html-eslint/no-obsolete-tags": 2,
+      "@html-eslint/require-button-type": 2,
+      "@html-eslint/no-restricted-attrs": [
+        "error",
+        {
+          "tagPatterns": [
+            "iframe"
+          ],
+          "attrPatterns": [
+            "width",
+            "height"
+          ]
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.html"
+        ],
+        "parser": "@html-eslint/parser"
+      }
+    ]
+  },
+  "stylelint": {
+    "ignoreFiles": [
+      "**/normalize.css"
+    ],
+    "plugins": [
+      "./stylelint-plugins/validate-bem.js"
+    ],
+    "rules": {
+      "bem/validate-import-normalize": true,
+      "bem/validate-import-fonts": true,
+      "bem/validate-font-face-declaration-in-fonts-file-only": true,
+      "no-duplicate-selectors": true,
+      "selector-no-qualifying-type": true,
+      "selector-max-id": 0,
+      "selector-max-attribute": 0,
+      "declaration-no-important": true,
+      "selector-max-universal": 0,
+      "selector-max-type": 0,
+      "max-nesting-depth": 0,
+      "selector-max-combinators": 0,
+      "at-rule-no-unknown": true,
+      "function-no-unknown": true,
+      "media-feature-name-no-unknown": true,
+      "property-no-unknown": true,
+      "selector-pseudo-class-no-unknown": true,
+      "selector-pseudo-element-no-unknown": true,
+      "selector-type-no-unknown": true,
+      "unit-no-unknown": true,
+      "no-unknown-animations": true,
+      "named-grid-areas-no-invalid": true,
+      "no-invalid-double-slash-comments": true,
+      "color-no-invalid-hex": true,
+      "no-invalid-position-at-import-rule": true,
+      "string-no-newline": true,
+      "font-family-no-missing-generic-family-keyword": true,
+      "keyframe-declaration-no-important": true,
+      "declaration-block-no-duplicate-properties": true,
+      "font-family-no-duplicate-names": true,
+      "keyframe-block-no-duplicate-selectors": true,
+      "no-duplicate-at-import-rules": true,
+      "no-descending-specificity": true,
+      "declaration-block-no-shorthand-property-overrides": true,
+      "annotation-no-unknown": true,
+      "declaration-property-value-disallowed-list": {
+        "word-wrap": "break-word",
+        "white-space": "pre-line"
+      },
+      "selector-class-pattern": "^[a-z]+[a-z\\-]*(__[a-z]+[a-z\\-]*)?(_[a-z]+[a-z\\-]*){0,2}$"
+    }
+  },
+  "jest": {
+    "preset": "jest-preset-stylelint",
+    "coverageThreshold": {
+      "global": {
+        "statements": 100
+      }
+    }
+  }
+}
