@@ -1,8 +1,8 @@
 const getTestRule = require('jest-preset-stylelint/getTestRule');
 
-global.testRule = getTestRule({ plugins: ['./stylelint-plugins/validate-font-face-declaration-in-fonts-file-only.js'] });
+global.testRule = getTestRule({ plugins: ['./stylelint-plugins/font-face-declaration-in-fonts-file-only.js'] });
 
-const { ruleName } = require('../validate-font-face-declaration-in-fonts-file-only.js');
+const { ruleName } = require('../font-face-declaration-in-fonts-file-only.js');
 
 testRule({
   ruleName,

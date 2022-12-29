@@ -4,7 +4,7 @@ const { pluginNamespace } = require('./utils/plugin-namespace.js');
 const { unknownErrorOccurredRuleMessage } = require('./utils/unknownErrorOccurredRuleMessage.js');
 
 const { report, ruleMessages } = stylelint.utils;
-const ruleName = pluginNamespace + '/validate-font-face-declaration-src';
+const ruleName = pluginNamespace + '/font-face-duplicate-src';
 
 const messages = ruleMessages(ruleName, {
     denyFontFaceDuplicatedSrc: (srcStatement) => `New 'src' value overrides previously assigned value: '${srcStatement}'`,

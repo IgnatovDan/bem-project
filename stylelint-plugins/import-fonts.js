@@ -1,10 +1,11 @@
 const stylelint = require('stylelint');
 
-const { parseUriFromImportRuleParams, unknownErrorOccurredRuleMessage } = require('./utils/parseUriFromImportParams.js');
+const { parseUriFromImportRuleParams } = require('./utils/parseUriFromImportParams.js');
+const { unknownErrorOccurredRuleMessage } = require('./utils/unknownErrorOccurredRuleMessage.js');
 const { pluginNamespace } = require('./utils/plugin-namespace.js');
 
 const { report, ruleMessages } = stylelint.utils;
-const ruleName = pluginNamespace + '/validate-import-fonts';
+const ruleName = pluginNamespace + '/import-fonts';
 
 const messages = ruleMessages(ruleName, {
     expectFontsBeforeBlocksFiles: (path) => `Expected '${path}' to be included before 'blocks' files`,
@@ -33,7 +34,7 @@ const ruleFunction = () => {
                 }
             }
             catch (e) {
-                report({ ruleName, result, message: messages.unknownErrorOccurred(importUriParams, e), node: rule });
+                report({ ruleName, result, message: messages.unknownErrorOccurred(e), node: rule });
             }
         });
     };

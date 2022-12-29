@@ -5,7 +5,7 @@ const { pluginNamespace } = require('./utils/plugin-namespace.js');
 const { unknownErrorOccurredRuleMessage } = require('./utils/unknownErrorOccurredRuleMessage.js');
 
 const { report, ruleMessages } = stylelint.utils;
-const ruleName = pluginNamespace + '/validate-font-face-declaration-in-fonts-file-only';
+const ruleName = pluginNamespace + '/font-face-declaration-in-fonts-file-only';
 const currentModuleFolder = path.dirname(module.parent.filename);
 
 const messages = ruleMessages(ruleName, {

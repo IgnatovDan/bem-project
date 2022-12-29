@@ -1,10 +1,11 @@
 const stylelint = require('stylelint');
 
-const { parseUriFromImportRuleParams, unknownErrorOccurredRuleMessage } = require('./utils/parseUriFromImportParams.js');
+const { parseUriFromImportRuleParams } = require('./utils/parseUriFromImportParams.js');
+const { unknownErrorOccurredRuleMessage } = require('./utils/unknownErrorOccurredRuleMessage.js');
 const { pluginNamespace } = require('./utils/plugin-namespace.js');
 
 const { report, ruleMessages } = stylelint.utils;
-const ruleName = pluginNamespace + '/validate-import-normalize';
+const ruleName = pluginNamespace + '/import-normalize';
 
 const messages = ruleMessages(ruleName, {
     invalidNormalizePath: (path) => `Expected '${path}' to be '../vendor/normalize.css'`,
@@ -33,7 +34,7 @@ const ruleFunction = () => {
                 }
             }
             catch (e) {
-                report({ ruleName, result, message: messages.unknownErrorOccurred(importUriParams, e), node: rule });
+                report({ ruleName, result, message: messages.unknownErrorOccurred(e), node: rule });
             }
         });
     };

@@ -1,4 +1,4 @@
-name: BEM/validate-bem tests
+name: bem-newbie tests
 on:
   pull_request:
     paths: 
