@@ -20,12 +20,6 @@ function parseUriFromImportRuleParams(importRuleParams) {
   return result;
 }
 
-function unknownErrorOccurredRuleMessage(importParams, errorMessage) {
-  /* istanbul ignore next */
-  return `Unknown error occurred while processing @import parameters: '${importParams}', '${errorMessage}'`;
-}
-
 module.exports = {
-  parseUriFromImportRuleParams,
-  unknownErrorOccurredRuleMessage
+  parseUriFromImportRuleParams
 };

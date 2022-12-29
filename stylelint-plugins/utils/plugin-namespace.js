@@ -1,4 +1,4 @@
-const pluginNamespace = 'bem';
+const pluginNamespace = 'bem-newbie';
 
 module.exports = {
   pluginNamespace

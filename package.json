@@ -26,7 +26,7 @@
     "form.name is required": "declared as required in metadata in .htmlvalidate.json, it is not required by default in 'html5' settings"
   },
   "todo": {
-    "rename rules/files to 'denyXXX' template": "instead of 'validate-font-face-declaration-src'",
+    "skip all exceptions in rules": "show only 'validation error' results",
     "@font-face2": "not used in blocks/** files",
     "BEM modifier": "not allowed to duplicate style of its master BEM element",
     "@media modifier": "not allowed to explicitly duplicate its master styles",
@@ -102,13 +102,13 @@
       "**/normalize.css"
     ],
     "plugins": [
-      "./stylelint-plugins/validate-bem.js"
+      "./stylelint-plugins/bem-newbie.js"
     ],
     "rules": {
-      "bem/validate-import-normalize": true,
-      "bem/validate-import-fonts": true,
-      "bem/validate-font-face-declaration-in-fonts-file-only": true,
-      "bem/validate-font-face-declaration-src": true,
+      "bem-newbie/import-normalize": true,
+      "bem-newbie/import-fonts": true,
+      "bem-newbie/font-face-declaration-in-fonts-file-only": true,
+      "bem-newbie/font-face-duplicate-src": true,
       "no-duplicate-selectors": true,
       "selector-no-qualifying-type": true,
       "selector-max-id": 0,

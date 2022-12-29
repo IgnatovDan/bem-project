@@ -1,8 +1,8 @@
 const getTestRule = require('jest-preset-stylelint/getTestRule');
 
-global.testRule = getTestRule({ plugins: ['./stylelint-plugins/validate-import-fonts.js'] });
+global.testRule = getTestRule({ plugins: ['./stylelint-plugins/import-fonts.js'] });
 
-const { ruleName } = require('../validate-import-fonts.js');
+const { ruleName } = require('../import-fonts.js');
 
 testRule({
   ruleName,
@@ -31,7 +31,7 @@ testRule({
   reject: [
     {
       code: `@import ../fonts/fonts.css;`,
-      message: `Unknown error occurred while processing @import parameters: '../fonts/fonts.css', 'TypeError: Cannot read properties of undefined (reading '0')' (${ruleName})`,      
+      message: `Unknown error occurred: 'TypeError: Cannot read properties of undefined (reading '0')' (${ruleName})`,      
     },
     {
       code: '@import url(../blocks/font.css)',

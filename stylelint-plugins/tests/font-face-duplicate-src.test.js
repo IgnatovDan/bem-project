@@ -1,8 +1,8 @@
 const getTestRule = require('jest-preset-stylelint/getTestRule');
 
-global.testRule = getTestRule({ plugins: ['./stylelint-plugins/validate-font-face-declaration-src.js'] });
+global.testRule = getTestRule({ plugins: ['./stylelint-plugins/font-face-duplicate-src.js'] });
 
-const { ruleName } = require('../validate-font-face-declaration-src');
+const { ruleName } = require('../font-face-duplicate-src');
 
 testRule({
   ruleName,
