@@ -6,10 +6,12 @@ A template project with a ready-to-use scripts that validates your project by BE
 1. Clone this repository into your environment
 1. Install 'Node.js': https://nodejs.org/en/download/
 1. Install dependencies: 'npm i'
-1. Copy your sources into the repository folder
-1. Run the 'test' script: **'npm run test'**
-1. Review the output:
-<img src="https://user-images.githubusercontent.com/2094015/210168166-3bb8eb8b-9883-4dfc-a183-f9d015bdf768.png" width="800">
+1. Copy your sources into the repository folder:  
+    
+    <img src="https://user-images.githubusercontent.com/2094015/210180978-94c21de6-865d-426e-88d4-d6e8628f8c46.png" width="150">
+1. Run the 'test' script and review the output: **'npm run test'**  
+    
+    <img src="https://user-images.githubusercontent.com/2094015/210168166-3bb8eb8b-9883-4dfc-a183-f9d015bdf768.png" width="800">
 
 Don't forget to use https://validator.w3.org/#validate_by_input and https://yoksel.github.io/html-tree/ to validate you HTML structure.
 
