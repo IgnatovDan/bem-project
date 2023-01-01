@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "all": "npm run stylelint & npm run eslint & npm run html-validate",
+    "test": "npm run stylelint & npm run eslint & npm run html-validate",
     "postcss-import": "postcss ./pages/index.css --use postcss-import --output ./styles.css",
     "stylelint": "npx stylelint \"**/*.css\"",
     "eslint": "npx eslint \"**/*.html\" --resolve-plugins-relative-to .",
     "html-validate": "npm exec html-validate index.html",
     "html-validator": "html-validator --file=index.html --verbose",
-    "test": "jest --coverage && eslint ."
+    "test-rules": "jest --coverage && eslint ."
   },
   "notes": {
     "html-validate config": ".htmlvalidate.json",
@@ -26,6 +26,8 @@
     "form.name is required": "declared as required in metadata in .htmlvalidate.json, it is not required by default in 'html5' settings"
   },
   "todo": {
+    "move todo entries to readme": "",
+    "remove test-rules script": "move rules to a separate package and use it in devDependencies",
     "skip all exceptions in rules": "show only 'validation error' results",
     "@font-face2": "not used in blocks/** files",
     "BEM modifier": "not allowed to duplicate style of its master BEM element",
@@ -36,7 +38,9 @@
     "@import url(some.css)": "allowed in the index.css only",
     "img.alt": "require RU texts somehow (at least one RU char?)",
     "head>title": "require RU texts somehow (at least one RU char?)",
-    "html.lang": "allow 'ru' only"
+    "html.lang": "allow 'ru' only",
+    "validate BEM html structure": "something similar to https://yoksel.github.io/html-tree/",
+    "extract configs from package.json into separate files": "eslint, stylelint, jest"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
