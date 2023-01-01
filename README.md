@@ -32,7 +32,6 @@ And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your
 1. @media modifier: not allowed to explicitly duplicate its master styles
 1. index.css: should be placed in the 'pages' folder
 1. index.css @import paths: should be in accordance with BEM nesting rules, '../blocks/' only, no grouping, no root folder paths
-1. css file name: should be equal to its CSS classes
 1. @import url(some.css): allowed in the index.css only
 1. img.alt: require RU texts somehow (at least one RU char?)
 1. head>title: require RU texts somehow (at least one RU char?)
