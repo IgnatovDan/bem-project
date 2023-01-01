@@ -9,6 +9,7 @@ A template project with a ready-to-use scripts that validates your project by BE
 1. Copy your sources into the repository folder
 1. Run the 'test' script: **'npm run test'**
 1. Review the output:
+![image](https://user-images.githubusercontent.com/2094015/210168166-3bb8eb8b-9883-4dfc-a183-f9d015bdf768.png)
 
 Don't forget to use https://validator.w3.org/#validate_by_input and https://yoksel.github.io/html-tree/ to validate you HTML structure.
 
