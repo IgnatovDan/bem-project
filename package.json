@@ -5,8 +5,7 @@
     "stylelint": "npx stylelint \"**/*.css\"",
     "eslint": "npx eslint \"**/*.html\" --resolve-plugins-relative-to .",
     "html-validate": "npm exec html-validate index.html",
-    "html-validator": "html-validator --file=index.html --verbose",
-    "test-rules": "jest --coverage && eslint ."
+    "html-validator": "html-validator --file=index.html --verbose"
   },
   "notes": {
     "html-validate config": ".htmlvalidate.json",
@@ -48,13 +47,12 @@
     "eslint": "^8.28.0",
     "html-validate": "^7.10.0",
     "html-validator-cli": "^7.0.1",
-    "jest": "*",
-    "jest-preset-stylelint": "^6.0.0",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",
     "postcss-value-parser": "^4.2.0",
     "stylelint": "^14.16.0",
-    "stylelint-config-standard": "^29.0.0"
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-bem-newbie": "^0.0.1"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -106,7 +104,7 @@
       "**/normalize.css"
     ],
     "plugins": [
-      "./stylelint-plugins/bem-newbie.js"
+      "stylelint-bem-newbie"
     ],
     "rules": {
       "bem-newbie/import-normalize": true,
@@ -151,14 +149,6 @@
         "white-space": "pre-line"
       },
       "selector-class-pattern": "^[a-z]+[a-z\\-]*(__[a-z]+[a-z\\-]*)?(_[a-z]+[a-z\\-]*){0,2}$"
-    }
-  },
-  "jest": {
-    "preset": "jest-preset-stylelint",
-    "coverageThreshold": {
-      "global": {
-        "statements": 100
-      }
     }
   }
 }
