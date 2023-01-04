@@ -24,23 +24,6 @@
     "BEM class names": "class-pattern rule in .htmlvalidate.json",
     "form.name is required": "declared as required in metadata in .htmlvalidate.json, it is not required by default in 'html5' settings"
   },
-  "todo": {
-    "move todo entries to readme": "",
-    "remove test-rules script": "move rules to a separate package and use it in devDependencies",
-    "skip all exceptions in rules": "show only 'validation error' results",
-    "@font-face2": "not used in blocks/** files",
-    "BEM modifier": "not allowed to duplicate style of its master BEM element",
-    "@media modifier": "not allowed to explicitly duplicate its master styles",
-    "index.css": "should be placed in the 'pages' folder",
-    "index.css @import paths": "should be in accordance with BEM nesting rules, '../blocks/' only, no grouping, no root folder paths",
-    "css file name": "should be equal to its CSS classes",
-    "@import url(some.css)": "allowed in the index.css only",
-    "img.alt": "require RU texts somehow (at least one RU char?)",
-    "head>title": "require RU texts somehow (at least one RU char?)",
-    "html.lang": "allow 'ru' only",
-    "validate BEM html structure": "something similar to https://yoksel.github.io/html-tree/",
-    "extract configs from package.json into separate files": "eslint, stylelint, jest"
-  },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
     "@html-eslint/parser": "^0.15.0",

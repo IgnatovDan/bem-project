@@ -27,9 +27,7 @@ And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your
 
 ## Todo:
 
-1. remove test-rules script: move rules to a separate package and use it in devDependencies
 1. skip all exceptions in rules: show only 'validation error' results
-1. @font-face2: not used in blocks/** files
 1. BEM modifier: not allowed to duplicate style of its master BEM element
 1. @media modifier: not allowed to explicitly duplicate its master styles
 1. index.css: should be placed in the 'pages' folder
@@ -40,3 +38,5 @@ And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your
 1. html.lang: allow 'ru' only
 1. validate BEM html structure: something similar to https://yoksel.github.io/html-tree/
 1. extract configs from package.json into separate files: eslint, stylelint, jest
+1. reorganize "features" in package.json
+1. reorganize "notes" in package.json
