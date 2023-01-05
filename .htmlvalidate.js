@@ -1,4 +1,4 @@
-{
+module.exports = {
   "extends": [
     "html-validate:recommended"
   ],
@@ -35,6 +35,7 @@
       "button": {
         "attributes": {
           "type": {
+            //this scenario is already checked by eslint, disable to avoid error message duplication
             "required": false
           }
         }
