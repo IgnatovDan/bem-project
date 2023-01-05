@@ -7,12 +7,6 @@
     "html-validate": "npm exec html-validate index.html",
     "html-validator": "html-validator --file=index.html --verbose"
   },
-  "notes": {
-    "How to fix: ESLint couldn't determine the plugin uniquely": "https://github.com/eslint/eslint/issues/13385 - use '--resolve-plugins-relative-to .' or 'root'",
-    "How to fix: WARN config global `--global`, `--local` are deprecated": "https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc",
-    "Why html-validator is not used": "it shows non-readable messages and doesn't have a config to disable some rules",
-    "Why button.type is not required in html-validate": "this scenario is already checked by eslint, disable to avoid error message duplication"
-  },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
     "@html-eslint/parser": "^0.15.0",

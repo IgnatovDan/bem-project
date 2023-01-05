@@ -17,15 +17,21 @@ Don't forget to use https://validator.w3.org/#validate_by_input and https://yoks
 
 And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your CSS (the 'npm run postcss-import' script combines all CSS files into a single file).
 
-## Used technologies:
-- ESLint
-- StyleLint
-- PostCSS
-- HTML Validate
-- HTML Validator
-- BEM
+## Used technologies
+- [ESLint](https://eslint.org/)
+- ['HTML ESLint' plugin for ESLint](https://github.com/yeonjuan/html-eslint)
+- [Stylelint](https://stylelint.io/)
+- [PostCSS](https://postcss.org/)
+- [HTML Validate](https://html-validate.org/)
+- [BEM](https://ru.bem.info/)
 
-## Todo:
+## Notes
+
+1. How to fix: ESLint couldn't determine the plugin uniquely: https://github.com/eslint/eslint/issues/13385 - use '--resolve-plugins-relative-to .' or 'root'
+1. How to fix: WARN config global `--global`, `--local` are deprecated: https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc
+1. Why html-validator is not used: it shows non-readable messages and doesn't have a config to disable some rules
+
+## Todo
 
 1. skip all exceptions in rules: show only 'validation error' results
 1. BEM modifier: not allowed to duplicate style of its master BEM element
