@@ -15,7 +15,8 @@ module.exports = {
     "heading-level": [
       2,
       {
-        //this scenario is already checked by eslint, disable to avoid error message duplication
+        // this scenario is already checked by eslint, disable to avoid error message duplication
+        // https://html-validate.org/rules/heading-level.html
         "allowMultipleH1": true
       }
     ],
