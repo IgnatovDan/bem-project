@@ -24,6 +24,7 @@ And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your
 - [PostCSS](https://postcss.org/)
 - [HTML Validate](https://html-validate.org/)
 - [BEM](https://ru.bem.info/)
+- [A set of custom Stylelint rules: stylelint-bem-newbie](https://www.npmjs.com/package/stylelint-bem-newbie)
 
 ## Notes
 
@@ -43,6 +44,3 @@ And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your
 1. head>title: require RU texts somehow (at least one RU char?)
 1. html.lang: allow 'ru' only
 1. validate BEM html structure: something similar to https://yoksel.github.io/html-tree/
-1. extract configs from package.json into separate files: eslint, stylelint, jest
-1. reorganize "features" in package.json
-1. reorganize "notes" in package.json
