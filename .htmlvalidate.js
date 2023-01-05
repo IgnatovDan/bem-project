@@ -12,7 +12,13 @@ module.exports = {
     "void-style": 0,
     "no-trailing-whitespace": 0,
     "attr-quotes": 1,
-    "heading-level": 2,
+    "heading-level": [
+      2,
+      {
+        //this scenario is already checked by eslint, disable to avoid error message duplication
+        "allowMultipleH1": true
+      }
+    ],
     "class-pattern": [
       2,
       {
