@@ -11,6 +11,7 @@ module.exports = {
     "bem-newbie/font-face-declaration-in-fonts-file-only": true,
     "bem-newbie/font-face-duplicate-src": true,
     "bem-newbie/class-name-equal-to-file-name": true,
+    "bem-newbie/duplicated-property-value-in-media": true,    
     "no-duplicate-selectors": true,
     "selector-no-qualifying-type": true,
     "selector-max-id": 0,
