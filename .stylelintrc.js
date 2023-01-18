@@ -41,7 +41,7 @@ module.exports = {
     "font-family-no-duplicate-names": true,
     "keyframe-block-no-duplicate-selectors": true,
     "no-duplicate-at-import-rules": true,
-    "no-descending-specificity": true,
+    "no-descending-specificity": false, // it can be better, but not critical when learning markup
     "declaration-block-no-shorthand-property-overrides": true,
     "annotation-no-unknown": true,
     "declaration-property-value-disallowed-list": {
