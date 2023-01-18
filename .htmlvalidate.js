@@ -66,7 +66,14 @@ module.exports = {
             "enum": ["/.+/"]
           }
         }
-      }
+      },
+      "iframe": {
+        "attributes": {
+          "title": {
+            "required": false, // it can be better, but not critical when learning markup
+          }
+        }
+      },
     }
   ]
 }
