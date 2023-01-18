@@ -14,6 +14,7 @@ module.exports = {
     // https://html.spec.whatwg.org/multipage/syntax.html#the-doctype
     // A string that is an ASCII case-insensitive match for the string "<!DOCTYPE".
     "doctype-style": 0,
+    "no-redundant-for": 1, // it can be better, but not critical when start learning markup
     "attr-quotes": 1,
     "heading-level": [
       2,
