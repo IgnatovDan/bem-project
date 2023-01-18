@@ -22,7 +22,14 @@ module.exports = {
     "max-nesting-depth": 0,
     "selector-max-combinators": 0,
     "at-rule-no-unknown": true,
-    "function-no-unknown": true,
+    "function-no-unknown": [
+      true,
+      {
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+        // disable error message for '.item { filter: alpha(opacity=50); }'
+        "ignoreFunctions": ["alpha"]
+      }
+    ],
     "media-feature-name-no-unknown": true,
     "property-no-unknown": true,
     "selector-pseudo-class-no-unknown": true,
@@ -41,7 +48,6 @@ module.exports = {
     "font-family-no-duplicate-names": true,
     "keyframe-block-no-duplicate-selectors": true,
     "no-duplicate-at-import-rules": true,
-    "no-descending-specificity": false, // it can be better, but not critical when learning markup
     "declaration-block-no-shorthand-property-overrides": true,
     "annotation-no-unknown": true,
     "declaration-property-value-disallowed-list": {
@@ -52,6 +58,7 @@ module.exports = {
     // https://gist.github.com/Potherca/f2a65491e63338659c3a0d2b07eee382
     // https://github.com/simonsmith/stylelint-selector-bem-pattern/issues/23#issuecomment-279216443
     // https://github.com/bem-sdk-archive/bem-naming/blob/master/lib/create-parse.js
-    "selector-class-pattern": "^[a-z]+[a-z\\-]*(__[a-z]+[a-z\\-]*)?(_[a-z]+[a-z\\-]*){0,2}$"
+    "selector-class-pattern": "^[a-z]+[a-z\\-]*(__[a-z]+[a-z\\-]*)?(_[a-z]+[a-z\\-]*){0,2}$",
+    //"no-descending-specificity": true, // don't use, it is not critical when learning markup and shows 'can skip' messages
   }
 }
