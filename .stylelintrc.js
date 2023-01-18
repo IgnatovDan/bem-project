@@ -26,7 +26,7 @@ module.exports = {
       true,
       {
         // https://developer.mozilla.org/en-US/docs/Web/CSS/filter
-        // allow 'filter: alpha(opacity=50);'
+        // disable error message for '.item { filter: alpha(opacity=50); }'
         "ignoreFunctions": ["alpha"]
       }
     ],
