@@ -11,6 +11,9 @@ module.exports = {
     "attr-delimiter": 0,
     "void-style": 0,
     "no-trailing-whitespace": 0,
+    // https://html.spec.whatwg.org/multipage/syntax.html#the-doctype
+    // A string that is an ASCII case-insensitive match for the string "<!DOCTYPE".
+    "doctype-style": 0,
     "attr-quotes": 1,
     "heading-level": [
       2,
