@@ -14,6 +14,7 @@ module.exports = {
     "bem-newbie/duplicated-property-value-in-media": true,
     "bem-newbie/duplicated-property-value-in-modifier": true,
     "bem-newbie/absolute-has-two-dimensions": true,
+    "bem-newbie/import-bem-path": true,    
     "no-duplicate-selectors": true,
     "selector-no-qualifying-type": true,
     "selector-max-id": 0,
