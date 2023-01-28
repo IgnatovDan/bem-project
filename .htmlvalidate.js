@@ -15,7 +15,13 @@ module.exports = {
     // A string that is an ASCII case-insensitive match for the string "<!DOCTYPE".
     "doctype-style": 0,
     "no-redundant-for": 1, // it can be better, but not critical when start learning markup
-    "attr-quotes": 1,
+    "attr-quotes": [
+      "error",
+      {
+        "style": "any",
+        "unquoted": false
+      }
+    ],
     "heading-level": [
       2,
       {
