@@ -32,14 +32,15 @@ And, use https://jigsaw.w3.org/css-validator/#validate_by_input to validate your
 1. How to fix: WARN config global `--global`, `--local` are deprecated: https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc
 1. Why html-validator is not used: it shows non-readable messages and doesn't have a config to disable some rules
 
-## Todo
+### Todos
 
-1. skip all exceptions in rules: show only 'validation error' results
-1. BEM modifier: not allowed to duplicate style of its master BEM element
-1. index.css: should be placed in the 'pages' folder
-1. index.css @import paths: should be in accordance with BEM nesting rules, '../blocks/' only, no grouping, no root folder paths
-1. @import url(some.css): allowed in the index.css only
-1. img.alt: require RU texts somehow (at least one RU char?)
-1. head>title: require RU texts somehow (at least one RU char?)
-1. html.lang: allow 'ru' only
-1. validate BEM html structure: something similar to https://yoksel.github.io/html-tree/
+- no
+
+### Rejected Todos
+1. validate BEM html structure: something similar to https://yoksel.github.io/html-tree/ - visualized errors are much better than text messages, my solution will not be better
+1. skip all exceptions in rules: show only 'validation error' results - there should be no errors. If occurs, I will research it and improve rules in the [stylelint-bem-newbie](https://github.com/IgnatovDan/stylelint-bem-newbie) project
+1. index.css: should be placed in the 'pages' folder - too rare error
+1. @import url(some.css): allowed in the index.css only - too rare error
+1. img.alt: require RU texts somehow (at least one RU char?) - too rare error
+1. head>title: require RU texts somehow (at least one RU char?) - too rare error
+1. html.lang: allow 'ru' only - too rare error
