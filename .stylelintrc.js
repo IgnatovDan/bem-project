@@ -3,6 +3,7 @@ module.exports = {
     "**/normalize.css"
   ],
   "plugins": [
+    "stylelint-csstree-validator",
     "stylelint-bem-newbie"
   ],
   "rules": {
@@ -14,7 +15,8 @@ module.exports = {
     "bem-newbie/duplicated-property-value-in-media": true,
     "bem-newbie/duplicated-property-value-in-modifier": true,
     "bem-newbie/absolute-has-two-dimensions": true,
-    "bem-newbie/import-bem-path": true,    
+    "bem-newbie/import-bem-path": true,
+    "csstree/validator": true,
     "no-duplicate-selectors": true,
     "selector-no-qualifying-type": true,
     "selector-max-id": 0,

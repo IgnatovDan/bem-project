@@ -17,7 +17,8 @@
     "postcss-import": "^15.0.0",
     "postcss-value-parser": "^4.2.0",
     "stylelint": "^14.16.0",
+    "stylelint-bem-newbie": "0.0.6",
     "stylelint-config-standard": "^29.0.0",
-    "stylelint-bem-newbie": "0.0.6"
+    "stylelint-csstree-validator": "^2.1.0"
   }
 }
