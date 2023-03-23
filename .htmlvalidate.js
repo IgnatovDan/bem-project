@@ -4,6 +4,7 @@ module.exports = {
   ],
   "rules": {
     "wcag/h30": 0,
+    "wcag/h71": 0, // disable '<fieldset> must have a <legend> as the first child' rule
     "no-style-tag": 2,
     "no-unknown-elements": 2,
     "prefer-button": 1,
@@ -38,7 +39,7 @@ module.exports = {
     ]
   },
   "elements": [
-    "html5",
+    "html5", // https://gitlab.com/html-validate/html-validate/-/blob/master/src/elements/html5.ts
     {
       "br": {
         "deprecated": true
