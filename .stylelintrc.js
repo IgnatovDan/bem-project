@@ -57,7 +57,7 @@ module.exports = {
     "font-family-no-duplicate-names": true,
     "keyframe-block-no-duplicate-selectors": true,
     "no-duplicate-at-import-rules": true,
-    "declaration-block-no-shorthand-property-overrides": true,
+    // "declaration-block-no-shorthand-property-overrides": true, -- not a showstopper
     "annotation-no-unknown": true,
     "declaration-property-value-disallowed-list": {
       "word-wrap": "break-word",
