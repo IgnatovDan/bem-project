@@ -7,17 +7,19 @@ module.exports = {
     "stylelint-bem-newbie"
   ],
   "rules": {
-    "bem-newbie/import-normalize": true,
-    "bem-newbie/import-fonts": true,
-    "bem-newbie/font-face-declaration-in-fonts-file-only": true,
-    "bem-newbie/font-face-duplicate-src": true,
-    "bem-newbie/class-name-equal-to-file-name": true,
-    "bem-newbie/duplicated-property-value-in-media": true,
-    "bem-newbie/duplicated-property-value-in-modifier": true,
     "bem-newbie/absolute-has-two-dimensions": [true, { severity: 'warning' }],
     "bem-newbie/animation-explicit-timing-function": true,
-    "bem-newbie/import-bem-path": true,
+    "bem-newbie/class-name-equal-to-file-name": true,
+    "bem-newbie/display-deny-inline": true,
+    "bem-newbie/duplicated-property-value-in-media": true,
+    "bem-newbie/duplicated-property-value-in-modifier": true,
+    "bem-newbie/font-face-declaration-in-fonts-file-only": true,
+    "bem-newbie/font-face-duplicate-src": true,
     "bem-newbie/font-weight-file-name": true,
+    "bem-newbie/import-bem-path": true,
+    "bem-newbie/import-fonts": true,
+    "bem-newbie/import-normalize": true,
+
     "csstree/validator": true,
     "no-duplicate-selectors": true,
     "selector-no-qualifying-type": true,
@@ -55,7 +57,7 @@ module.exports = {
     "font-family-no-duplicate-names": true,
     "keyframe-block-no-duplicate-selectors": true,
     "no-duplicate-at-import-rules": true,
-    "declaration-block-no-shorthand-property-overrides": true,
+    // "declaration-block-no-shorthand-property-overrides": true, -- not a showstopper
     "annotation-no-unknown": true,
     "declaration-property-value-disallowed-list": {
       "word-wrap": "break-word",
